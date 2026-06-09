@@ -1,0 +1,22 @@
+# cliforge.yml — Example CLI scaffold config
+
+name: my-tool
+description: "My awesome CLI tool"
+language: node
+version: "1.0.0"
+
+commands:
+  - name: run
+    description: "Run the main process"
+    args:
+      - name: input
+        required: true
+      - name: output
+        default: "./out"
+
+  - name: config
+    description: "Manage configuration"
+    subcommands:
+      - name: set
+      - name: get
+      - name: reset
